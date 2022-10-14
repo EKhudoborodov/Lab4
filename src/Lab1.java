@@ -12,7 +12,7 @@ public class Lab1 { // объявление класса
         if(point1.comparePoints(point2)&&point2.comparePoints(point3)&&point3.comparePoints(point1 )){ // если точки не совпадают
             System.out.printf("Area = %.2f", computeArea(point1, point2, point3));
         }else{ // если есть совпадающие точки
-            System.out.println("There are same points. Change input.");
+            System.out.println("There are s0ame points. Change input.");
         }
     }
 
@@ -26,7 +26,7 @@ public class Lab1 { // объявление класса
         double b = point2.distanceTo(point3); // рассчёт стороны b
         double c = point1.distanceTo(point3); // рассчёт стороны c
         double p = (a+b+c)/2; // рассчёт полупериметра
-        return Math.sqrt(p*(p-a)*(p-b)*(p-c)); // вывод площади
+        return Math.round(Math.sqrt(p*(p-a)*(p-b)*(p-c))*100.0)/100.0; // вывод площади
     }
 
 }

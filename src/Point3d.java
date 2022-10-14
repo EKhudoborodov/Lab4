@@ -1,19 +1,4 @@
-public class Point3d { // Объявление класса
-    public double getxCoord() { // Получить координату Х точки
-        return xCoord;
-    }
-
-    public void setxCoord(double xCoord) { // Задать координату Х точке
-        this.xCoord = xCoord;
-    }
-
-    public double getyCoord() { // Получить координату Y точки
-        return yCoord;
-    }
-
-    public void setyCoord(double yCoord) { // Задать координату Y точке
-        this.yCoord = yCoord;
-    }
+public class Point3d extends Point2d { // Объявление класса
 
     public double getzCoord() { // Получить координату Z точки
         return zCoord;
@@ -23,13 +8,10 @@ public class Point3d { // Объявление класса
         this.zCoord = zCoord;
     }
 
-    private double xCoord;
-    private double yCoord;
     private double zCoord;
 
     public Point3d(double xCoord, double yCoord, double zCoord) {
-        this.xCoord = xCoord;
-        this.yCoord = yCoord;
+        super(xCoord, yCoord);
         this.zCoord = zCoord;
     }
 
